@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {getDataMovie, searchMovie} from '../utils/api'
 import { MainPage } from '../assets/components/MainPage'
 import { DetailMovie } from './DetailMovie'
+import { Link } from 'react-router-dom'
 
 export const HomePage = () => {
   const [movies, setMovies] = useState([])
@@ -16,18 +17,20 @@ export const HomePage = () => {
     return (
       <div className="flex flex-wrap justify-center">
         {movies.map((movie, i) => (
-          <div
-            key={i}
-            className="relative w-[200px] h-[300px] m-4 rounded-lg overflow-hidden cursor-pointer"
-          >
-            <img
-              src={`${process.env.REACT_APP_IMAGE}/${movie.poster_path}`}
-              alt={movie.title}
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-end pb-3 text-white">
-              <h3 className="text-center">{movie.title}</h3>
+          <Link to={`/DetailMovie/${movie.id}`}>
+            <div
+              key={i}
+              className="relative w-[200px] h-[300px] m-4 rounded-lg overflow-hidden cursor-pointer"
+            >
+              <img
+                src={`${process.env.REACT_APP_IMAGE}/${movie.poster_path}`}
+                alt={movie.title}
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-end pb-3 text-white">
+                <h3 className="text-center">{movie.title}</h3>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     );
