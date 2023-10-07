@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {getDataMovie, searchMovie} from '../utils/api'
 import { MainPage } from '../assets/components/MainPage'
-import { DetailMovie } from './DetailMovie'
 import { Link } from 'react-router-dom'
 
 export const HomePage = () => {
@@ -76,7 +75,7 @@ export const HomePage = () => {
           <a className="border-[red] border-[2px] bg-[red]  px-[10px] py-[5px] rounded-xl text-[white] cursor-pointer" href="#">Register</a>
         </div>
       </div>
-      <MainPage></MainPage>
+      <MainPage/>
       <div className="flex flex-row justify-between px-[90px] items-center mt-7">
         <h3 className="text-lg text-[white]">Popular Movies</h3>
         <a className="text-[red] text-sm" href="#">
