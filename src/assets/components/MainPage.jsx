@@ -17,7 +17,7 @@ export const MainPage = () => {
     <div className='w-full h-[550px] text-white'>
         <div className='w-full h-full'>
             <div className='absolute w-full h-[550px] bg-gradient-to-r from-black'></div>
-            <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt={movie?.title}></img>
+            <img className='w-full h-full object-cover' src={`${process.env.REACT_APP_IMAGE}/${movie?.backdrop_path}`} alt={movie?.title}></img>
             <div className='absolute w-full top-[30%] p-4 md:p-8'>
                 <h1 className='text-[80px] font-semibold'>{movie?.title}</h1>
                 <p className='w-full max-w-[50%] mb-5'>{movie?.overview}</p>
