@@ -32,8 +32,8 @@ export const DetailMovie = () => {
             <div className='absolute w-full h-[563px] bg-gradient-to-r from-black'></div>
             <img className='w-full h-full object-cover' src={`${process.env.REACT_APP_IMAGE}/${detailMovies?.backdrop_path}`} alt={detailMovies?.title}></img>
             <div className='absolute w-full top-[10%] p-4 md:p-8'>
-                <h1 className='text-[80px] font-semibold'>{detailMovies?.title}</h1>
-                <p className='text-[30px] font-semibold'>{genreMovie}</p>
+                <h1 className='text-[60px] font-semibold leading-[70px]'>{detailMovies?.title}</h1>
+                <p className='text-[30px] mb-5 font-semibold'>{genreMovie}</p>
                 <p className='w-full max-w-[50%] mb-5'>{detailMovies?.overview}</p>
                 <p className='w-full max-w-[50%] mb-5'>{detailMovies?.vote_average} / 10</p>
                 <div>

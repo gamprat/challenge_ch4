@@ -14,11 +14,11 @@ export const MainPage = () => {
   console.log(movies)
 
   return (
-    <div className='w-full h-[550px] text-white'>
+    <div className='w-full h-[700px] text-white'>
         <div className='w-full h-full'>
-            <div className='absolute w-full h-[550px] bg-gradient-to-r from-black'></div>
+            <div className='absolute w-full h-[700px] bg-gradient-to-r from-black'></div>
             <img className='w-full h-full object-cover' src={`${process.env.REACT_APP_IMAGE}/${movies?.backdrop_path}`} alt={movies?.title}></img>
-            <div className='absolute w-full top-[30%] p-4 md:p-8'>
+            <div className='absolute w-full top-[50%] p-4 md:p-8'>
                 <h1 className='text-[80px] font-semibold'>{movies?.title}</h1>
                 <p className='w-full max-w-[50%] mb-5'>{movies?.overview}</p>
                 <div>
